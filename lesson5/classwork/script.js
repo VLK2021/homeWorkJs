@@ -107,19 +107,17 @@
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,
 // а виводить найбільше (Math використовувати заборонено);
 
-//arguments  в стрілочних функціях фіксована кількість
-
-// function func() {
+// let func = (...num) => {
 //     let max = 0;
-//     let min = arguments[0];
-//     for (const element of arguments) {
-//         element < min ? min = element : element > max ? max = element : 'w';
+//     let min = num[0];
+//     for (const element of num) {
+//         element < min ? min = element : element > max ? max = element : 'wrong!';
 //     }
 //     console.log(max);
 //     return min;
 // }
-// let num = func(2,3,-56,956,1,63,);
-// console.log(num);
+// let w = func(1, 2, 3, 4, 5, 6, 7, -1);
+// console.log(w);
 
 
 // - створити функцію яка заповнює масив рандомними числами
@@ -139,8 +137,27 @@
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit.
 // limit - аргумент, який характеризує кінцеве значення діапазону.
 
-
-
+// let arr = (array, limit) => {
+//     for (i = 0; i < 10; i++) {
+//         array[i] = Math.round(Math.random() * limit);
+//     }
+//     return array;
+// }
+// let w = arr([], 1108);
+// console.log(w);
 
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+
+
+// let arr = array => {
+//     let newArray = [];
+//     for (i = array.length - 1; i >= 0; i--) {
+//         newArray[array.length - (i + 1)] = array[i];
+//     }
+//     return newArray;
+// }
+// let w = arr([1,2,3,4]);
+// console.log(w);
+
+
