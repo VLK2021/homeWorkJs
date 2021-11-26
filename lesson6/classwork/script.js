@@ -143,7 +143,7 @@
 // let cutString = (str, n) => {
 //     let array = [];
 //     for (i = 0; i < str.length + n; i++) {
-//         array.push(str.substr(0, 3));
+//         array.push(str.substr(0, n));
 //         str = str.slice(n);
 //     }
 //     return array
