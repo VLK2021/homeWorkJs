@@ -15,7 +15,6 @@
 //     Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
 
 
-
 // document.onclick = function (e) {
 //     let div = document.createElement('div');
 //     div.style.padding = '5px';
@@ -114,8 +113,61 @@
 // }
 
 
+//------Докидую завдання---------------------------------------------------------------------------------
 
 
+// *****(Прям овердоз с рекурсией) Создать функцию которая принимает
+// какой-либо элемент DOM-структуры
+// Функция создает в боди 2 кнопки (назад/вперед)
+// при нажатии вперед, вы переходите к дочернему элементу,
+//     при еще одном нажатии на "вперед",
+//     вы переходите к следующему дочернему элементу (лежащему на одном уровне)
+// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед"
+// позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
+//     Когда все дети заканчиваются, мы выходим из данного дочернего
+// элемента и переходим к следующему, лежащему с ним на одном уровне
 
+
+// let elementDom = document.getElementsByClassName('wrap');
+// let order = 0;
+// let res = [];
+//
+// function func(elementDom) {
+//
+//     function f(treeDom) {
+//         if (treeDom.children.length) {
+//             for (element of treeDom.children) {
+//                 if (element.children.length) {
+//                     f(element)
+//                 } else {
+//                     res.push(element);
+//                 }
+//
+//             }
+//         }
+//     }
+//
+//     let btn1 = document.createElement('button');
+//     btn1.innerHTML = 'Вперед';
+//     document.body.appendChild(btn1);
+//
+//     let btn2 = document.createElement('button');
+//     btn2.innerHTML = 'Назад';
+//     document.body.appendChild(btn2);
+//
+//
+//     btn1.onclick =  () => {
+//         f(elementDom[0])
+//         console.log(res[order]);
+//         ++order;
+//     }
+//
+//     btn2.onclick = () => {
+//         f(elementDom[0])
+//         console.log(res[order -1]);
+//         --order;
+//     }
+// }
+// func(elementDom);
 
 
