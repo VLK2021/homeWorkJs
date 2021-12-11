@@ -1,27 +1,27 @@
 .popDiv {
     display: none;
-    position: fixed;
-    top: 250px;
-    left: 200px;
+    /*position: fixed;*/
+    /*top: 250px;*/
+    /*left: 200px;*/
     background: gainsboro;
-    width: 60%;
+    width: 100%;
     padding: 5px;
     box-sizing: border-box;
     text-align: center;
     color: blue;
     border: 1px solid darkred;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
-.wrapDiv {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 2px;
-    justify-content: space-between;
-}
+/*.wrapDiv {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    column-gap: 2px;*/
+/*    justify-content: space-between;*/
+/*}*/
 
 .blockDiv {
-    width: 32%;
+    width: 100%;
     margin: 1px;
     margin-bottom: 5px;
     border: 1px solid black;

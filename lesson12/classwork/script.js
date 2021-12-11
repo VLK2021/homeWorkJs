@@ -6,46 +6,61 @@
 //     окремий блок всі коментарі поточного поста
 
 
-// fetch('https://jsonplaceholder.typicode.com/posts')
-//     .then(response => response.json())
-//     .then(result => {
-//
-//         let wrapDiv = document.createElement('div');
-//         wrapDiv.className = 'wrapDiv';
-//         document.body.append(wrapDiv);
-//
-//         result.forEach(value => {
-//
-//             let blockDiv = document.createElement('div');
-//             blockDiv.className = 'blockDiv';
-//             wrapDiv.append(blockDiv);
-//
-//             let btn = document.createElement('button');
-//             btn.innerText = 'click';
-//             btn.style.marginBottom = '5px';
-//             blockDiv.append(btn);
-//
-//             let popDiv = document.createElement('div');
-//             popDiv.className = 'popDiv';
-//             document.body.append(popDiv);
-//
-//
-//             for (const valueKey in value) {
-//                 let keyDiv = document.createElement('div');
-//                 keyDiv.className = 'keyDiv';
-//                 blockDiv.appendChild(keyDiv);
-//                 keyDiv.innerHTML = `${valueKey.toUpperCase()} - ${value[valueKey]}`;
-//             }
-//
-//             btn.addEventListener('click', function (e) {
-//                 popDiv.style.display = 'block';
-//                 let newStr = value.body[0].toUpperCase() + value.body.substr(1);
-//                 popDiv.innerHTML = `${newStr}`;
-//             })
-//
-//             popDiv.onclick = e => {
-//                 popDiv.style.display = 'none'
-//             }
-//
-//         })
-//     })
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(result => {
+
+        let wrapDiv = document.createElement('div');
+        wrapDiv.className = 'wrapDiv';
+        document.body.append(wrapDiv);
+
+        result.forEach(value => {
+
+            let blockDiv = document.createElement('div');
+            blockDiv.className = 'blockDiv';
+            wrapDiv.append(blockDiv);
+
+            let btn = document.createElement('button');
+            btn.innerText = 'click';
+            btn.style.marginBottom = '5px';
+            blockDiv.append(btn);
+
+            let popDiv = document.createElement('div');
+            popDiv.className = 'popDiv';
+            blockDiv.append(popDiv);
+
+            for (const valueKey in value) {
+                let keyDiv = document.createElement('div');
+                keyDiv.className = 'keyDiv';
+                blockDiv.appendChild(keyDiv);
+                keyDiv.innerHTML = `${valueKey.toUpperCase()} - ${value[valueKey]}`;
+            }
+
+            btn.addEventListener('click', function (e) {
+                popDiv.style.display = 'block';
+                let id =
+                fetch(`https://jsonplaceholder.typicode.com/comments/`)
+                    .then(response => response.json())
+                    .then(coments => {
+                        for (const coment of coments) {
+                            let comDiv = document.createElement('div');
+                            popDiv.append(comDiv);
+
+                            for (const comentKey in coment) {
+
+                                if (coment.postId === value.userId){
+
+                                    let newStr = coment.body[0].toUpperCase() + coment.body.substr(1);
+                                    comDiv.innerHTML = `${newStr}`;
+                                }
+                            }
+                        }
+                    })
+            })
+
+            popDiv.onclick = e => {
+                popDiv.style.display = 'none'
+            }
+
+        })
+    })
