@@ -36,9 +36,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 keyDiv.innerHTML = `${valueKey.toUpperCase()} - ${value[valueKey]}`;
             }
 
-            btn.addEventListener('click', function (e) {
+            btn.addEventListener('click', function () {
                 popDiv.style.display = 'block';
-                let id =
                 fetch(`https://jsonplaceholder.typicode.com/comments/`)
                     .then(response => response.json())
                     .then(coments => {
@@ -47,9 +46,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                             popDiv.append(comDiv);
 
                             for (const comentKey in coment) {
-
                                 if (coment.postId === value.userId){
-
                                     let newStr = coment.body[0].toUpperCase() + coment.body.substr(1);
                                     comDiv.innerHTML = `${newStr}`;
                                 }
@@ -58,7 +55,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                     })
             })
 
-            popDiv.onclick = e => {
+            popDiv.onclick = () => {
                 popDiv.style.display = 'none'
             }
 
