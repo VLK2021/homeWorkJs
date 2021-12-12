@@ -1,0 +1,59 @@
+
+.wrapDiv {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.userDiv {
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    background: blanchedalmond;
+    border: 1px solid brown;
+    border-radius: 10px;
+}
+
+.popDiv {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0;
+}
+
+.postsDiv {
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.onePostDiv {
+    width: 100%;
+    background: gainsboro;
+    color: blue;
+    margin: 5px;
+    border: 1px solid green;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+}
+
+.comentsDiv {
+    width: 80%;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+}
+
+.oneComentDiv {
+    width: 99%;
+    background: blanchedalmond;
+    color: midnightblue;
+    border: 1px solid brown;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+}
+
+
+
