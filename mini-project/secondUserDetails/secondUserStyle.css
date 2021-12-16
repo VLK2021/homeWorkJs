@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapDiv {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    box-sizing: border-box;
+    background: gainsboro;
+    color: blue;
+}
+
+.userDiv, .adressDiv, .companiDiv {
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.userBtn {
+    width: 90%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.popDiv {
+    width: 100%;
+    background: blanchedalmond;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titleDiv {
+    width: 19%;
+    padding: 5px;
+    box-sizing: border-box;
+    background: gainsboro;
+    height: 140px;
+    border: 1px solid brown;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    color: midnightblue;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postBtn {
+    width: 20%;
+    height: 25px;
+    color: brown;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0 10px 10px;
+}
+
+
+
+
