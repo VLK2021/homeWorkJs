@@ -364,3 +364,156 @@
 //
 // })
 //
+
+//====================async await===============================================================
+
+// function getAp(getAp) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (getAp) {
+//                 resolve('Я просинаюсь!');
+//             } else {
+//                 reject('I want sleep!');
+//             }
+//         }, 900);
+//     })
+// }
+//
+//
+// function goBath(bath) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (bath) {
+//                 resolve('іду у ванну!');
+//             } else {
+//                 reject('I dont go to bathrom');
+//             }
+//         }, 500);
+//     })
+// }
+//
+//
+// function goEat(eat) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (eat) {
+//                 resolve(`Іду їсти ${eat}`);
+//             } else {
+//                 reject('I do not go to kitchen(((!');
+//             }
+//         }, 700);
+//     })
+// }
+//
+//
+// function goWork(gowork) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (gowork) {
+//                 resolve('Я іду на роботу go go go');
+//             } else {
+//                 reject('I stay at home');
+//             }
+//         }, 100);
+//     })
+// }
+//
+//
+// function workOnTheWork(work) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (work) {
+//                 resolve('Я працюю на роботі!');
+//             } else {
+//                 reject;
+//             }
+//         }, 600);
+//     })
+// }
+//
+//
+// function goHome(gohome) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (gohome) {
+//                 resolve('Я іду додому!!!!');
+//             } else {
+//                 reject('I stay at work(((');
+//             }
+//         }, 200);
+//     })
+// }
+//
+//
+// function watchTv(watchtv) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (watchtv) {
+//                 resolve('Я дивлюсь телевізор!')
+//             } else {
+//                 reject('wrong!')
+//             }
+//         }, 400);
+//     })
+// }
+//
+//
+// function goSleep(gosleep) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (gosleep) {
+//                 resolve('Я іду спати!');
+//             } else {
+//                 reject('wrong!');
+//             }
+//         }, 300);
+//     })
+// }
+//
+//
+// async function myDayAsyncF() {
+//
+//     try {
+//         let getap = await getAp(true);
+//         console.log(getap);
+//
+//         let gobath = await goBath(true);
+//         console.log(gobath);
+//
+//         let breakfast = await goEat('Сніданок!');
+//         console.log(breakfast);
+//
+//         let work = await goWork(true);
+//         console.log(work);
+//
+//         let workonwork = await workOnTheWork(true);
+//         console.log(workonwork);
+//
+//         let lanch = await goEat('обід!');
+//         console.log(lanch);
+//
+//         let workonwork1 = await workOnTheWork(true);
+//         console.log(workonwork1);
+//
+//         let gohome = await goHome(true);
+//         console.log(gohome);
+//
+//         let gobath1 = await goBath(true);
+//         console.log(gobath1);
+//
+//         let dener = await goEat('вечерю!');
+//         console.log(dener);
+//
+//         let tv = await watchTv(true);
+//         console.log(tv);
+//
+//         let sleep = await goSleep(true);
+//         console.log(sleep);
+//     } catch (error) {
+//         console.log(error);
+//     }
+//
+// }
+//
+// myDayAsyncF();
+//
